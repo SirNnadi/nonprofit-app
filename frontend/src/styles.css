@@ -1,0 +1,155 @@
+:root {
+  font-family: Inter, system-ui, sans-serif;
+  color: #172018;
+  background: #f5f7f2;
+}
+
+* { box-sizing: border-box; }
+
+body { margin: 0; }
+
+.hero {
+  min-height: 540px;
+  background: linear-gradient(135deg, #173b2b, #356b4d);
+  color: white;
+}
+
+nav {
+  max-width: 1100px;
+  margin: auto;
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+nav strong { font-size: 1.3rem; }
+
+.hero-content {
+  max-width: 900px;
+  margin: 90px auto 0;
+  padding: 24px;
+}
+
+.eyebrow {
+  font-size: .78rem;
+  letter-spacing: .15em;
+  font-weight: 800;
+}
+
+h1 {
+  max-width: 800px;
+  font-size: clamp(2.6rem, 7vw, 5rem);
+  line-height: 1;
+  margin: 18px 0;
+}
+
+.hero-content p:not(.eyebrow) {
+  max-width: 650px;
+  font-size: 1.2rem;
+  line-height: 1.7;
+}
+
+.button, button {
+  display: inline-block;
+  border: 0;
+  border-radius: 10px;
+  padding: 14px 22px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.button {
+  margin-top: 15px;
+  background: #f3c969;
+  color: #172018;
+  text-decoration: none;
+}
+
+.impact {
+  max-width: 1000px;
+  margin: -45px auto 70px;
+  padding: 28px;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(0,0,0,.08);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  position: relative;
+  z-index: 0;
+}
+
+.impact h2 { margin: 0; font-size: 2rem; }
+.impact p { color: #667066; }
+
+.donation-section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px 24px 90px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.donation-section h2 {
+  font-size: 3rem;
+  margin: 10px 0;
+}
+
+.donation-section > div > p:not(.eyebrow) {
+  line-height: 1.8;
+  color: #586258;
+}
+
+form {
+  background: white;
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0,0,0,.06);
+}
+
+label {
+  display: block;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+
+input, textarea {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  padding: 13px;
+  border: 1px solid #ccd3cc;
+  border-radius: 8px;
+  font: inherit;
+}
+
+button {
+  width: 100%;
+  background: #2f6b48;
+  color: white;
+}
+
+.success { color: #237342; font-weight: 700; }
+.error { color: #b42318; font-weight: 700; }
+
+footer {
+  padding: 30px;
+  text-align: center;
+  background: #172018;
+  color: white;
+}
+
+@media (max-width: 750px) {
+  .impact, .donation-section {
+    grid-template-columns: 1fr;
+  }
+
+  .impact {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  nav { flex-direction: column; }
+}

@@ -9,12 +9,11 @@ services:
       POSTGRES_DB: donations
     volumes:
       - postgres_data:/var/lib/postgresql
-      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
     ports:
       - "5432:5432"
 
   backend:
-    build: ./backend
+    image: ${ECR_REGISTRY}/nonprofit-backend:${IMAGE_TAG:-latest}
     container_name: nonprofit-backend
     restart: unless-stopped
     environment:
@@ -30,7 +29,7 @@ services:
       - "5000:5000"
 
   frontend:
-    build: ./frontend
+    image: ${ECR_REGISTRY}/nonprofit-frontend:${IMAGE_TAG:-latest}
     container_name: nonprofit-frontend
     restart: unless-stopped
     depends_on:

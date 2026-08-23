@@ -131,8 +131,86 @@ function App() {
         </form>
       </section>
 
-      <footer>
-        <p>Hope & Help — a donation application demo.</p>
+      <footer className="site-footer">
+        <div className="footer-grid">
+          <div className="footer-col">
+            <h3>Our Mission</h3>
+            <p>
+              Hope &amp; Help exists to serve people experiencing poverty,
+              hunger, and hardship. We believe every person deserves dignity,
+              compassion, and a community that cares — and we work every day
+              to make that a reality through faith-driven action.
+            </p>
+          </div>
+
+          <div className="footer-col">
+            <h3>Community Service</h3>
+            <ul>
+              <li>Weekly food pantry &amp; meal distributions</li>
+              <li>Clothing drives and household essentials</li>
+              <li>After-school tutoring &amp; mentorship</li>
+              <li>Emergency shelter assistance</li>
+              <li>Job readiness &amp; skills workshops</li>
+            </ul>
+          </div>
+
+          <div className="footer-col">
+            <h3>Impact of Your Gift</h3>
+            <ul>
+              <li>$25 feeds a family for a week</li>
+              <li>$50 provides school supplies for a child</li>
+              <li>$100 covers emergency utility assistance</li>
+              <li>$250 sponsors a job-training session</li>
+              <li>Every dollar stays in the community</li>
+            </ul>
+          </div>
+
+          <div className="footer-col">
+            <h3>Founders</h3>
+            <p>
+              Hope &amp; Help was founded by a group of faith-led community
+              members united by a single conviction — that loving your neighbor
+              is not optional. Our founders have served thousands of families
+              across the region and remain actively involved in every program
+              we run.
+            </p>
+          </div>
+
+          <div className="footer-col">
+            <h3>Contact Us</h3>
+            <ul>
+              <li>📧 <a href="mailto:hello@hopeandhelp.org">hello@hopeandhelp.org</a></li>
+              <li>📞 (555) 012-3456</li>
+              <li>📍 123 Mercy Lane, Hopeville, USA</li>
+              <li>Mon – Fri, 9 AM – 5 PM</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="footer-scripture">
+          <blockquote>
+            &ldquo;It is more blessed to give than to receive.&rdquo;
+            <cite>— Acts 20:35</cite>
+          </blockquote>
+          <blockquote>
+            &ldquo;Give, and it will be given to you. A good measure, pressed down,
+            shaken together and running over, will be poured into your lap. For
+            with the measure you use, it will be measured to you.&rdquo;
+            <cite>— Luke 6:38</cite>
+          </blockquote>
+        </div>
+
+        <div className="footer-bottom">
+          <p className="jesus-declaration">
+            ✝ Jesus is Lord. We honor His sacrifice — that He willingly gave
+            His life for our sins so that we might have life, and have it
+            abundantly. It is out of that same selfless love that we are
+            compelled to give, serve, and care for one another. ✝
+          </p>
+          <p className="footer-copy">
+            © {new Date().getFullYear()} Hope &amp; Help. All rights reserved.
+          </p>
+        </div>
       </footer>
     </main>
   );

@@ -43,13 +43,13 @@ jobs:
         id: ecr-password
         run: echo "password=$(aws ecr get-login-password --region ${{ env.AWS_REGION }})" >> $GITHUB_OUTPUT
 
-      - name: Copy compose file to prod EC2
+      - name: Copy files to prod EC2
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
-          source: docker-compose.yml
+          source: docker-compose.yml,database/init.sql
           target: ~/app
 
       - name: Deploy to prod EC2

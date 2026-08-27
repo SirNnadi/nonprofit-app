@@ -53,7 +53,7 @@ pipeline {
 
     post {
         always {
-            node('any') {
+            node(env.NODE_NAME) {
                 sh '''
                     docker rmi nonprofit-backend  || true
                     docker rmi nonprofit-frontend || true

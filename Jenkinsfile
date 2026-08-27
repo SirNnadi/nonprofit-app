@@ -55,8 +55,8 @@ pipeline {
         always {
             node(env.NODE_NAME) {
                 sh '''
-                    docker rmi nonprofit-backend  || true
-                    docker rmi nonprofit-frontend || true
+                    docker rmi $ECR_REGISTRY/nonprofit-backend:$IMAGE_TAG  || true
+                    docker rmi $ECR_REGISTRY/nonprofit-frontend:$IMAGE_TAG || true
                 '''
             }
         }

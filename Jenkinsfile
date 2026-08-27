@@ -53,7 +53,7 @@ pipeline {
 
     post {
         always {
-            node {
+            node('any') {
                 sh '''
                     docker rmi nonprofit-backend  || true
                     docker rmi nonprofit-frontend || true
